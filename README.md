@@ -2,7 +2,7 @@
 ## Description
     Appliction for creating blog posts, sharing images, "videos", weblinks, and associating them with defaul or user created "tags".
 ## Design
-     ![main frame image](public/img/Screen Shot 2019-09-25 at 5.55.05 PM.png)
+     ![main frame image](https://files.slack.com/files-pri/THMCEKQRF-FNE3MJ01H/screen_shot_2019-09-25_at_5.55.05_pm.png)
 
 ## APIs Used
     to be discussed.
