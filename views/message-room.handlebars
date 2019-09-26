@@ -1,0 +1,40 @@
+<div class="wrapper">
+    {{!-- ===== HEADER ===== --}}
+    <div class="container">
+        <nav class="col s12" id="navbar">
+            <div class="nav-wrapper">
+                <i class="fas fa-mug-hot"> Coffee Talk</i>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Liked</a></li>
+                    <li><a href="#">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- ===== HAMBURGER MENU =====  -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Liked</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        {{!-- ===== ADD MESSAGE ==== --}}
+        <div class="row">
+            <div class="add-message">
+                <h4>Add Message</h4>
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="icon_prefix2" class="materialize-textarea" data-length="240"></textarea>
+                            <label for="icon_prefix2">Message</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

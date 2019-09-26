@@ -1,19 +1,50 @@
-<div class="container">
-  <div class="row">
-    <div class="col-8 offset-2">
-      <div class="card mt-4">
-        <div class="card-body">
-          <h5 class="card-title">Example</h5>
-          <p>
-            <strong>ID</strong>: {{example.id}}</p>
-          <p>
-          <p>
-            <strong>Text</strong>: {{example.text}}</p>
-          <p>
-            <strong>Description:</strong> {{example.description}}</p>
-            <a href="/">← Back To Home</a>
+<div class="wrapper">
+  {{!-- ===== HEADER ===== --}}
+  <div class="container">
+    <nav class="col s12" id="navbar">
+      <div class="nav-wrapper">
+        <i class="fas fa-mug-hot"> Coffee Talk</i>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#">Message Room</a></li>
+          <li><a href="#">Liked</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ===== HAMBURGER MENU =====  -->
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="#">Message Room</a></li>
+      <li><a href="#">Liked</a></li>
+      <li><a href="#">Log Out</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="welcome">
+        <h4 class="welcome-">Welcome, <span>"Username"</span></h4>
+      </div>
+      <div class="recent">
+        <h4>Recent Messages</h4>
+        <div class="message-box" style="border:1px solid #000; width:400px; height:600px;">
+
         </div>
       </div>
     </div>
   </div>
 </div>
+
+{{!-- ===== JQUERY CDN ===== --}}
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+{{!-- ===== MATERIALIZE JS ===== --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/login.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('.sidenav').sidenav();
+  });
+</script>
