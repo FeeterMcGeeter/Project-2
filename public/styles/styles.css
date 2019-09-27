@@ -1,3 +1,48 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ * {
+  box-sizing: border-box;
+}
+
+.icon-block {
+ padding: 0 15px;
+}
+.icon-block .material-icons {
+ font-size: inherit;
+}
+
+.coffee {
+margin-top: -60px; 
+width: 100%
+}
+
+p {
+ text-align: center;
+ font-size: 24px;
+ color: grey;
+ margin-bottom: -30px;
+}
+
+.github {
+ color: white;
+ font-size: 20px;
+}
+
+.page-footer {
+  padding-bottom: 20px;
+  margin-top: -40px;
+}
+
+nav {
+  background-color: grey;
+}
