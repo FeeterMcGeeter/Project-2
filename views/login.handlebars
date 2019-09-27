@@ -1,0 +1,63 @@
+<div class="container">
+  {{!-- ===== HEADER ===== --}}
+  <div class="wrapper">
+    <nav class="col s12" id="navbar">
+      <div class="nav-wrapper center">
+        <h2><i class="fas fa-mug-hot"></i> Coffee Talk</h2>
+      </div>
+    </nav>
+  </div>
+
+  <div class="row welcome">
+    <p>Welcome to Coffee Talk! Log in or create an account to start messaging the world!</p>
+  </div>
+
+  <div class="row">
+    <div class="row log-in">
+      <h3>Already a Member?</h3>
+      <form>
+        <div class="input-field col">
+          <i class="material-icons prefix">email</i>
+          <input type="text" id="icon_prefix" class="validate" id="emailLogIn">
+          <label for="icon_prefix">Email Address</label>
+        </div>
+        <div class="input-field col">
+          <i class="material-icons prefix">lock</i>
+          <input type="text" id="icon_prefix" class="validate" id="passwordLogIn">
+          <label for="icon_prefix">Password</label>
+        </div>
+      </form>
+      <a class="waves-effect waves-light btn-large" id="logIn">Log In</a>
+    </div>
+
+    <div class="row sign-up">
+      <h3>Create an Account</h3>
+      <form>
+        <div class="input-field col">
+          <i class="material-icons prefix">account_circle</i>
+          <input type="text" id="icon_prefix" class="validate" id="usernameLogIn">
+          <label for="icon_prefix">Username</label>
+        </div>
+        <div class="input-field col">
+          <i class="material-icons prefix">email</i>
+          <input type="text" id="icon_prefix" class="validate" id="emailSignUp">
+          <label for="icon_prefix">Email Address</label>
+        </div>
+        <div class="input-field col">
+          <i class="material-icons prefix">lock</i>
+          <input type="text" id="icon_prefix" class="validate" id="passwordSignUp">
+          <label for="icon_prefix">Password</label>
+        </div>
+      </form>
+      <a class="waves-effect waves-light btn-large" id="signUp">Sign Up</a>
+    </div>
+  </div>
+</div>
+
+{{!-- ===== JQUERY CDN ===== --}}
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+{{!-- ===== MATERIALIZE JS ===== --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/login.js"></script>
