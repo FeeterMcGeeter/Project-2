@@ -20,21 +20,22 @@
         </ul>
     </div>
 
-    <div class="container">
-        {{!-- ===== ADD MESSAGE ==== --}}
-        <div class="row">
-            <div class="add-message">
-                <h4>Add Message</h4>
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <i class="material-icons prefix">mode_edit</i>
-                            <textarea id="icon_prefix2" class="materialize-textarea" data-length="240"></textarea>
-                            <label for="icon_prefix2">Message</label>
-                        </div>
-                    </div>
-                </form>
-            </div>
+
+    <div id="coffee-chat">
+        <h2>Coffee Talk</h2>
+        <div id="chat-window">
+            <div id="output"></div>
+            <div id="feedback"></div>
         </div>
+        <input id="handle" type="text" placeholder="Handle" />
+        <input id="message" type="text" placeholder="Message" />
+        <button id="send">Send</button>
     </div>
 </div>
+
+{{!-- ===== JQUERY CDN ===== --}}
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+{{!-- ===== MATERIALIZE JS ===== --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/js/chat.js"></script>
