@@ -3,12 +3,12 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var session = require("express-session");
 var passport = require("./config/passport");
-var server = require("http").Server(app);
 var socket = require("socket.io");
 
 var db = require("./models");
 
 var app = express();
+var server = require("http").Server(app);
 var PORT = process.env.PORT || 3000;
 
 // Middleware
@@ -63,7 +63,7 @@ io.on("connection", function(socket) {
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
-    app.listen(PORT, function() {
+    server.listen(PORT, function() {
         console.log(
             "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
             PORT,
