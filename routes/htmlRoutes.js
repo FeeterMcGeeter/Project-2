@@ -11,13 +11,13 @@ module.exports = function(app) {
         });
     });
 
-    // Load example page and pass in an example by id
-    app.get("/example/:id", function(req, res) {
-        db.Example.findOne({ where: { id: req.params.id } }).then(function(
-            dbExample
+    // Load user page and pass User by id
+    app.get("/user/:id", function(req, res) {
+        db.User.findOne({ where: { id: req.params.id } }).then(function(
+            dbUser
         ) {
-            res.render("example", {
-                example: dbExample
+            res.render("user", {
+                user: dbUser
             });
         });
     });
