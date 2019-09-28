@@ -3,6 +3,8 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var session = require("express-session");
 var passport = require("./config/passport");
+var server = require("http").Server(app);
+var socket = require("socket.io");
 
 var db = require("./models");
 
@@ -42,6 +44,22 @@ var syncOptions = { force: false };
 if (process.env.NODE_ENV === "test") {
     syncOptions.force = true;
 }
+
+// ===== SOCKET SET UP =====
+var io = socket(server);
+
+io.on("connection", function(socket) {
+    console.log("Made socket connection", socket.id);
+
+    socket.on("chat", function(data) {
+        io.sockets.emit("chat", data);
+    });
+
+    socket.on("typing", function(data) {
+        socket.broadcast.emit("typing", data);
+    });
+});
+
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
