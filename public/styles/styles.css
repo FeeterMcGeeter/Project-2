@@ -1,3 +1,108 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ * {
+  box-sizing: border-box;
+}
+
+.icon-block {
+ padding: 0 15px;
+}
+.icon-block .material-icons {
+ font-size: inherit;
+}
+
+.coffee {
+margin-top: -60px; 
+width: 100%
+}
+
+p {
+ text-align: center;
+ font-size: 24px;
+ color: grey;
+ margin-bottom: -30px;
+}
+
+.github {
+ color: white;
+ font-size: 20px;
+}
+
+.page-footer {
+  padding-bottom: 20px;
+  margin-top: -40px;
+}
+
+nav {
+  background-color: grey;
+}
+
+ /* body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+} */
+
+.newcontainer {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  /* float: right; */
+
+} 
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.newcontainer::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.newcontainer img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: -30px;
+  border-radius: 50%;
+}
+
+.newcontainer img.right {
+  float: right;
+  /* margin-left: -30px; */
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+
+.message {
+  font-size: 16px;
+}
+
+.user-image {
+  width: 80%;
+  padding-top: 10px;
+}

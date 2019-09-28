@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "password",
+    "password": "Yosterkitty3",
     "database": "coffeeTalk_db",
     "host": "localhost",
     "dialect": "mysql"
