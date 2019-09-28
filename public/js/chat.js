@@ -10,21 +10,22 @@ var feedback = $("#feedback");
 
 // ===== EMIT EVENTS =====
 button.on("click", function() {
+    console.log(message.val());
     socket.emit("chat", {
-        message: message.value,
-        handle: handle.value
+        message: message.val(),
+        handle: handle.val()
     });
 });
 
 message.keypress(function() {
-    socket.emit("typing", handle.value);
+    socket.emit("typing", handle.val());
 });
 
 // ===== LISTEN FOR EVENTS =====
 socket.on("chat", function(data) {
-    output.HTML("<p><strong>" + data.handle + ": </strong>" + data.message + "</p>");
+    output.html("<p><strong>" + data.handle + ": </strong>" + data.message + "</p>");
 });
 
 socket.on("typing", function(data) {
-    feedback.HTML("<p><em>" + data + " is typing a message...</em></p>");
+    feedback.html("<p><em>" + data + " is typing a message...</em></p>");
 });
