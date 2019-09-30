@@ -4,7 +4,7 @@ module.exports = function(app) {
     // Load index page
     app.get("/", function(req, res) {
         db.User.findAll({}).then(function(dbUser) {
-            res.render("message-room", {
+            res.render("login", {
                 msg: "Welcome!",
                 user: dbUser
             });

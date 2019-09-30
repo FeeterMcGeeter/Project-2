@@ -1,63 +1,89 @@
-<div class="container">
-  {{!-- ===== HEADER ===== --}}
-  <div class="wrapper">
-    <nav class="col s12" id="navbar">
-      <div class="nav-wrapper center">
-        <h2><i class="fas fa-mug-hot"></i> Coffee Talk</h2>
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <img class="coffee" src="/img/coffeetalk.png">
+      <div class="row welcome">
+          <p>Welcome to Coffee Talk! Log in or create an account to start messaging the world!</p>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s6">
+                  <h3>Already a Member?</h3>
+                  <form>
+                    <div class="input-field col">
+                      <i class="material-icons prefix">email</i>
+                      <input type="text" id="icon_prefix" class="validate" id="emailLogIn">
+                      <label for="icon_prefix">Email Address</label>
+                    </div>
+                    <div class="input-field col">
+                      <i class="material-icons prefix">lock</i>
+                      <input type="text" id="icon_prefix" class="validate" id="passwordLogIn">
+                      <label for="icon_prefix">Password</label>
+                    </div>
+                  </form>
+                  <a class="waves-effect waves-light btn-large" id="logIn">Log In</a>
+                </div>
+         
+        <div class="col s6">
+            <div class="row sign-up">
+                <h3>Create an Account</h3>
+                <form>
+                  {{!-- <div class="input-field col">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input type="text" id="icon_prefix" class="validate" id="usernameLogIn">
+                    <label for="icon_prefix">Username</label>
+                  </div> --}}
+                  <div class="input-field col">
+                    <i class="material-icons prefix">email</i>
+                    <input type="text" id="icon_prefix" class="validate" id="emailSignUp">
+                    <label for="icon_prefix">Email Address</label>
+                  </div>
+                  <div class="input-field col">
+                    <i class="material-icons prefix">lock</i>
+                    <input type="text" id="icon_prefix" class="validate" id="passwordSignUp">
+                    <label for="icon_prefix">Password</label>
+                  </div>
+                </form>
+                <a class="waves-effect waves-light btn-large" id="signUp">Sign Up</a>
+              </div>
+            </div>
+          </div>
+          
+          
+
+    </div> 
+    <br><br>
+  </div>
+
+  <footer class="page-footer grey">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Team Bio</h5>
+          <p class="team grey-text text-lighten-4">Our team consisting of members Elizabeth, Jeff and Oscar, have created an appliction for social messaging.
+          
+        </div>
+         <div class="col l3 s12">
+          
+        </div> 
+        <div class="col l3 s12">
+         <a class="github" href="https://github.com/FeeterMcGeeter/Project-2"> Github Repository</a>
+        </div>
       </div>
-    </nav>
-  </div>
+    </div> 
+    </body>
 
-  <div class="row welcome">
-    <p>Welcome to Coffee Talk! Log in or create an account to start messaging the world!</p>
-  </div>
+</html>
 
-  <div class="row">
-    <div class="row log-in">
-      <h3>Already a Member?</h3>
-      <form>
-        <div class="input-field col">
-          <i class="material-icons prefix">email</i>
-          <input type="text" id="icon_prefix" class="validate" id="emailLogIn">
-          <label for="icon_prefix">Email Address</label>
-        </div>
-        <div class="input-field col">
-          <i class="material-icons prefix">lock</i>
-          <input type="text" id="icon_prefix" class="validate" id="passwordLogIn">
-          <label for="icon_prefix">Password</label>
-        </div>
-      </form>
-      <a class="waves-effect waves-light btn-large" id="logIn">Log In</a>
-    </div>
 
-    <div class="row sign-up">
-      <h3>Create an Account</h3>
-      <form>
-        <div class="input-field col">
-          <i class="material-icons prefix">account_circle</i>
-          <input type="text" id="icon_prefix" class="validate" id="usernameLogIn">
-          <label for="icon_prefix">Username</label>
-        </div>
-        <div class="input-field col">
-          <i class="material-icons prefix">email</i>
-          <input type="text" id="icon_prefix" class="validate" id="emailSignUp">
-          <label for="icon_prefix">Email Address</label>
-        </div>
-        <div class="input-field col">
-          <i class="material-icons prefix">lock</i>
-          <input type="text" id="icon_prefix" class="validate" id="passwordSignUp">
-          <label for="icon_prefix">Password</label>
-        </div>
-      </form>
-      <a class="waves-effect waves-light btn-large" id="signUp">Sign Up</a>
-    </div>
-  </div>
-</div>
-
-{{!-- ===== JQUERY CDN ===== --}}
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-{{!-- ===== MATERIALIZE JS ===== --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="/js/index.js"></script>
-<script src="/js/login.js"></script>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/js/materialize.js"></script>
+  <script src="/js/init.js"></script>
