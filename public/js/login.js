@@ -16,9 +16,11 @@
 $("#signUp").on("click", function(event) {
     event.preventDefault();
 
-    var emailSignUp = $("#emailSignUp").val();
-    var passwordSignUp = $("#passwordSignUp").val();
+    
+    var emailSignUp = $(".emailSignUp").val();
+    var passwordSignUp = $(".passwordSignUp").val();
 
+    
     console.log(emailSignUp);
     console.log(passwordSignUp);
 });
@@ -26,8 +28,10 @@ $("#signUp").on("click", function(event) {
 $("#logIn").on("click", function(event) {
     event.preventDefault();
 
-    var emailLogIn = $("#emailLogIn").val();
-    var passwordLogIn = $("#passwordLogIn").val();
+    // console.log($("#emailLogIn"));
+
+    var emailLogIn = $(".emailLogIn").val();
+    var passwordLogIn = $(".passwordLogIn").val();
 
     console.log(emailLogIn);
     console.log(passwordLogIn);
