@@ -28,7 +28,7 @@ width: 100%
 
 p {
  text-align: center;
- font-size: 24px;
+ font-size: 26px;
  color: grey;
  margin-bottom: -30px;
 }
@@ -104,5 +104,40 @@ nav {
 
 .user-image {
   width: 80%;
-  padding-top: 10px;
+  padding-top: 50px;
+}
+
+.form {
+  margin-left: 225px;
+}
+
+.member {
+  margin-left: 50px;
+}
+
+.create {
+  margin-left: 50px;
+}
+
+#logIn {
+  margin-top: 200px;
+  margin-left: -150px;
+}
+
+#signUp {
+  margin-top: 200px;
+  margin-left: -150px;
+}
+
+.brand-logo {
+  margin-left: 30px;
+}
+
+.about {
+  font-size: 16px;
+  margin-left: -80px;
+}
+
+.team-bio {
+  font-size: 16px;
 }
