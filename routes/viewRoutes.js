@@ -1,7 +1,6 @@
-var db = require("../models");
-var path = require("path");
+// var db = require("../models");
 
-var isAuthenticated = require("../config/middleware/isAuthenticated");
+// var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
     // Load index page
@@ -28,7 +27,7 @@ module.exports = function (app) {
         if (req.user) {
             res.redirect("/home");
         } else {
-            res.redirect('login');
+            res.redirect("login");
         }
         // res.sendFile(path.join(__dirname, "../views/login.handlebars"));
     });
