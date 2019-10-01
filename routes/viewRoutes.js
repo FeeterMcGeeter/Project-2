@@ -27,7 +27,7 @@ module.exports = function (app) {
         if (req.user) {
             res.redirect("/home");
         } else {
-            res.redirect("login");
+            res.redirect("/login");
         }
         // res.sendFile(path.join(__dirname, "../views/login.handlebars"));
     });
