@@ -1,74 +1,83 @@
 <div class="wrapper">
-        <!-- {{! ===== HEADER ===== }} -->
-        <div class="section no-pad-bot" id="index-banner">
-            <div class="container">
-                <br><br>
-                <img class="coffee" src="img/coffeetalk.png">
+    <!-- {{! ===== HEADER ===== }} -->
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <img class="coffee" src="img/coffeetalk.png">
 
-                <!-- <div class="container"> -->
-                <nav>
-                    <div class="nav-wrapper">
+            <!-- <div class="container"> -->
+            <nav>
+                <div class="nav-wrapper">
 
-                        <a href="#" class="brand-logo">Welcome, <span> "Username"</span></a>
-                        <ul id="nav-mobile" class="right hide-on-med-and-down">
-                            {{!-- <li><a href="sass.html">Message Room</a></li> --}}
-                            <li><a href="#">Liked</a></li>
-                            <li><a href="#">Log Out</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                
-                <!-- ===== HAMBURGER MENU =====  -->
-                <ul class="sidenav" id="mobile-demo">
-                    <li><a href="#">Message Room</a></li>
-                    <li><a href="#">Liked</a></li>
-                    <li><a href="#">Log Out</a></li>
-                </ul>
+                    <a href="#" class="brand-logo">Welcome, <span> "Username"</span></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        {{!-- <li><a href="sass.html">Message Room</a></li> --}}
+                        <li><a href="#">Liked</a></li>
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- ===== HAMBURGER MENU =====  -->
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="#">Message Room</a></li>
+                <li><a href="#">Liked</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+
+        <a href="#" class="brand-logo">Welcome, <span>{{email}}</span></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Message Room</a></li>
+            <li><a href="badges.html">Liked</a></li>
+            <li><a href="collapsible.html">Log Out</a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <!-- ===== HAMBURGER MENU =====  -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#">Message Room</a></li>
+        <li><a href="#">Liked</a></li>
+        <li><a href="#">Log Out</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s6">
+                <div class="welcome">
+                    <img class="user-image" src="/img/man.jpg">
+                    <!-- <h4 class="welcome-">Welcome, <span>"Username"</span></h4> -->
+                </div>
             </div>
 
-
-            <div class="container">
-                <div class="section">
-
-
-                    <div class="row">
-                        <div class="col s6">
-
-                            <div class="welcome">
-                                <img class="user-image" src="/img/man.jpg">
-                                <p class="about"> Add a short bio to tell people about yourself.
-                                    <br>
-                                    <br> Lives in Dallas, Texas
-                                    <br> Joined September 30, 2019
-                                </p>
-                            </div>
-                        </div>
-                       
             <div class="col s6">
-                        <div id="coffee-chat">
-        <h2>Chat Room</h2>
-        <div id="chat-window">
-            <div id="output"></div>
-            <div id="feedback"></div>
+                <div id="coffee-chat">
+                    <h2>Chat Room</h2>
+                    <div id="chat-window">
+                        <div id="output"></div>
+                        <div id="feedback"></div>
+                    </div>
+                    <input id="handle" type="text" placeholder="Handle" />
+                    <input id="message" type="text" placeholder="Message" />
+                    <button id="send">Send</button>
+                </div>
+            </div>
         </div>
-        <input id="handle" type="text" placeholder="Handle" />
-        <input id="message" type="text" placeholder="Message" />
-        <button id="send">Send</button>
     </div>
 </div>
-           
+</div>
+</div>
 
-            <!-- {{! ===== JQUERY CDN =====}} -->
-            <script src="https://code.jquery.com/jquery-3.4.1.js"
-                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-            <!-- {{! ===== MATERIALIZE JS ===== }} -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-              <script src="/js/index.js"></script>
-           
-            <script src="/js/chat.js"></script>
-
-            <!--  Scripts-->
-            <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-          
-              <script src="/js/materialize.js"></script>
-            <script src="/js/init.js"></script>
+<!-- {{! ===== JQUERY CDN =====}} -->
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+<!-- {{! ===== MATERIALIZE JS ===== }} -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/chat.js"></script>
+<!-- ===== SCRIPTS ===== -->
+<script src="/js/materialize.js"></script>
+<script src="/js/init.js"></script>
