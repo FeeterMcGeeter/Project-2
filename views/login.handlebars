@@ -3,28 +3,28 @@
       <br><br>
       <img class="coffee" src="/img/coffeetalk.png">
       <div class="row welcome">
-          <p>Welcome to Coffee Talk! Log in or create an account to start messaging the world!</p>
+          <p>Welcome to Coffee Talk! <br>Log in or create an account to start messaging the world!</p>
         </div>
     </div>
   </div>
 
 
-  <div class="container">
+  <div class="form container">
     <div class="section">
 
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s6">
                   <h3>Already a Member?</h3>
-                  <form>
+                  <form class="member">
                     <div class="input-field col">
                       <i class="material-icons prefix">email</i>
-                      <input type="text" id="icon_prefix" class="validate" id="emailLogIn">
+                      <input type="text" id="icon_prefix" class="validate emailLogIn">
                       <label for="icon_prefix">Email Address</label>
                     </div>
                     <div class="input-field col">
                       <i class="material-icons prefix">lock</i>
-                      <input type="text" id="icon_prefix" class="validate" id="passwordLogIn">
+                      <input type="text" id="icon_prefix" class="validate passwordLogIn">
                       <label for="icon_prefix">Password</label>
                     </div>
                   </form>
@@ -34,20 +34,15 @@
         <div class="col s6">
             <div class="row sign-up">
                 <h3>Create an Account</h3>
-                <form>
-                  {{!-- <div class="input-field col">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input type="text" id="icon_prefix" class="validate" id="usernameLogIn">
-                    <label for="icon_prefix">Username</label>
-                  </div> --}}
+                <form class="create">
                   <div class="input-field col">
                     <i class="material-icons prefix">email</i>
-                    <input type="text" id="icon_prefix" class="validate" id="emailSignUp">
+                    <input type="text" id="icon_prefix" class="validate emailSignUp">
                     <label for="icon_prefix">Email Address</label>
                   </div>
                   <div class="input-field col">
                     <i class="material-icons prefix">lock</i>
-                    <input type="text" id="icon_prefix" class="validate" id="passwordSignUp">
+                    <input type="text" id="icon_prefix" class="validate passwordSignUp">
                     <label for="icon_prefix">Password</label>
                   </div>
                 </form>
@@ -67,7 +62,7 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Team Bio</h5>
-          <p class="team grey-text text-lighten-4">Our team consisting of members Elizabeth, Jeff and Oscar, have created an appliction for social messaging.
+          <p class="team grey-text text-lighten-4 team-bio">Our team consisting of members Elizabeth, Jeff and Oscar, have created an appliction for social messaging.
           
         </div>
          <div class="col l3 s12">
