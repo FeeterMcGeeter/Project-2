@@ -6,7 +6,7 @@ module.exports = function (app) {
 
     
     app.post("/api/login", passport.authenticate("local"), function (req, res) {
-        res.redirect("/home");
+        res.status(201).end();
         // console.log({user: req.user});
 
     }); 

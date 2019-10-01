@@ -65,14 +65,11 @@ $(document).ready(function () {
             email: email,
             password: password
         })
-            .done(function (data) {
-                console.log(data);
-                emailSignUpInput.val("");
-                passwordSignUpInput.val("");
-                // If there's an error, log the error
+            .done(function () {
+                window.location.replace("/home");
             })
             .fail(function (err) {
-                console.log(err);
+                alert('NO');
             });
     }
 });
