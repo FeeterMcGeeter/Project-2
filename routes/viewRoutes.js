@@ -7,17 +7,12 @@ module.exports = function (app) {
         }
     });
 
-<<<<<<< HEAD
     app.get("/home", function(req, res) {
         console.log(req.query);
-        if (req.query.render === 'liked') {
-            return res.render("home", { show: 'liked' });
+        if (req.query.render === "liked") {
+            return res.render("home", { show: "liked" });
         }
         return res.render("home");
-=======
-    app.get("/home", function (req, res) {
-        res.render("home");
->>>>>>> 6361c7165af5c5d2e09412b03c16c6d6a732396b
     });
 
     app.get("/login", function (req, res) {

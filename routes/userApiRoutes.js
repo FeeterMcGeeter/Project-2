@@ -2,21 +2,13 @@ var db = require("../models");
 var passport = require("../config/passport");
 
 module.exports = function (app) {
-<<<<<<< HEAD
 
-    
     app.post("/api/login", passport.authenticate("local"), function (req, res) {
         res.status(201).end();
         // console.log({user: req.user});
 
     }); 
 
-=======
-    app.post("/api/login", passport.authenticate("local"), function (req, res) {
-        res.redirect("/home");
-    });
-
->>>>>>> 6361c7165af5c5d2e09412b03c16c6d6a732396b
     app.post("/api/signup", function (req, res) {
         db.User.create({
             email: req.body.email,
@@ -32,11 +24,7 @@ module.exports = function (app) {
 
     app.get("/logout", function (req, res) {
         req.logout();
-<<<<<<< HEAD
         res.redirect("/login");
-=======
-        res.json(req.user);
->>>>>>> 6361c7165af5c5d2e09412b03c16c6d6a732396b
     });
 
     app.get("/api/user_data", function (req, res) {
