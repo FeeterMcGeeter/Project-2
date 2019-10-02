@@ -33,6 +33,10 @@ module.exports = function (app) {
     });
 
     app.get("/home", function(req, res) {
+        console.log(req.query);
+        if (req.query.render === 'liked') {
+            return res.render("home", { show: 'liked' });
+        }
         return res.render("home");
     });
 
