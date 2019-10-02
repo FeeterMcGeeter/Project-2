@@ -48,22 +48,21 @@ if (process.env.NODE_ENV === "test") {
 // ===== SOCKET SET UP =====
 var io = socket(server);
 
-io.on("connection", function(socket) {
+io.on("connection", function (socket) {
     console.log("Made socket connection", socket.id);
 
-    socket.on("chat", function(data) {
+    socket.on("chat", function (data) {
         io.sockets.emit("chat", data);
     });
 
-    socket.on("typing", function(data) {
+    socket.on("typing", function (data) {
         socket.broadcast.emit("typing", data);
     });
 });
 
-
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-    server.listen(PORT, function() {
+db.sequelize.sync(syncOptions).then(function () {
+    server.listen(PORT, function () {
         console.log(
             "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
             PORT,
