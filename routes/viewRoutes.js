@@ -19,3 +19,13 @@ module.exports = function (app) {
         res.render("404");
     });
 };
+
+// app.get("/profile",function(req,res){
+// database.sequelize(finndalla({where:{username}.then(
+//     function(data){
+//         var email = data.email
+//         var;
+//         res.render('profile',{email:email,username:username})
+//     }
+// ))
+// })
