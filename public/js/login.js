@@ -16,25 +16,37 @@
 $("#signUp").on("click", function(event) {
     event.preventDefault();
 
-    
-    var emailSignUp = $(".emailSignUp").val();
-    var passwordSignUp = $(".passwordSignUp").val();
+    var email = $(".emailSignUp").val().trim();
+    var password = $(".passwordSignUp").val().trim();
 
-    
-    console.log(emailSignUp);
-    console.log(passwordSignUp);
+    $.post("/api/signup", {
+        email: email,
+        password: password
+    });
 });
 
 $("#logIn").on("click", function(event) {
-    event.preventDefault();
+    event.preventDefault(); 
 
-    // console.log($("#emailLogIn"));
+    var email = $(".emailLogIn").val().trim();
+    var password = $(".passwordLogIn").val().trim();
 
-    var emailLogIn = $(".emailLogIn").val();
-    var passwordLogIn = $(".passwordLogIn").val();
+    $.post("/api/login", {
+        email: email,
+        password: password
+    }).then(function() {
+        window.location.replace("/home");
+    });
 
-    console.log(emailLogIn);
-    console.log(passwordLogIn);
+
 });
+
+$("#logOut").on("click", function() {
+    $.ajax({url: "/logout", method: "GET"}).then (function() {
+        window.location.replace("/login");
+    });
+});
+
+
 
 
