@@ -2,9 +2,12 @@ var db = require("../models");
 var passport = require("../config/passport");
 
 module.exports = function (app) {
+
     app.post("/api/login", passport.authenticate("local"), function (req, res) {
-        res.redirect("/home");
-    });
+        res.status(201).end();
+        // console.log({user: req.user});
+
+    }); 
 
     app.post("/api/signup", function (req, res) {
         db.User.create({
@@ -21,7 +24,7 @@ module.exports = function (app) {
 
     app.get("/logout", function (req, res) {
         req.logout();
-        res.json(req.user);
+        res.redirect("/login");
     });
 
     app.get("/api/user_data", function (req, res) {
@@ -32,6 +35,14 @@ module.exports = function (app) {
                 email: req.user.email,
                 id: req.user.id
             });
+        }
+    });
+
+    app.get("/", function (req, res) {
+        if (req.user) {
+            return res.render("home");
+        } else {
+            return res.render("login");
         }
     });
 };
