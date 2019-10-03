@@ -14,8 +14,8 @@ module.exports = function (app) {
             email: req.body.email,
             password: req.body.password
         })
-            .then(function () {
-                res.redirect(307, "/api/login"); //once views is done redirect /home
+            .then(function (user) {
+                res.json(user); //once views is done redirect /home
             })
             .catch(function (err) {
                 res.status(401).json(err);
