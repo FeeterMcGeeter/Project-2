@@ -9,11 +9,10 @@ module.exports = function (app) {
     });
 
     app.get("/home", function(req, res) {
-        console.log(req.query);
         if (req.query.render === "liked") {
             return res.render("home", { show: "liked" });
         }
-        return res.render("home");
+        return res.render("home", { userName: req.user.userName });
     });
 
     app.get("/profile", function(req, res) {
