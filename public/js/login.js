@@ -25,10 +25,9 @@ $(document).ready(function () {
             email: email,
             password: password
         })
-            .done(function (data) {
-                console.log(data);
-                window.location.replace("/home");
-            })
+            .done(function () {
+                window.location.replace("/profile");
+            }) 
             .fail(function (err) {
                 console.log(err);
             });
