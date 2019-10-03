@@ -141,3 +141,17 @@ nav {
 .team-bio {
   font-size: 16px;
 }
+
+#message-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#like {
+  width: 30px;
+  height: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: transparent;
+  color: navy;
+}
