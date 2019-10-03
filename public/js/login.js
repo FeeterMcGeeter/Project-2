@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var emailSignUpInput = $(".emailSignUp");
     var passwordSignUpInput = $(".passwordSignUp");
+
     // When the signup button is clicked, we validate the email and password are not blank
     $("#signUp").on("click", function (event) {
         event.preventDefault();
@@ -62,9 +63,10 @@ $(document).ready(function () {
                 alert("NO");
             });
     }
-});
-$("#logOut").on("click", function () {
-    $.ajax({ url: "/logout", method: "GET" }).then(function () {
-        window.location.replace("/login");
+
+    $("#logOut").on("click", function () {
+        $.ajax({ url: "/logout", method: "GET" }).then(function () {
+            window.location.replace("/login");
+        });
     });
 });
