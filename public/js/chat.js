@@ -23,7 +23,9 @@ message.keypress(function() {
 
 // ===== LISTEN FOR EVENTS =====
 socket.on("chat", function(data) {
-    output.html("<p><strong>" + data.handle + ": </strong>" + data.message + "</p>");
+    output.append("<p><strong>" + data.handle + ": </strong>" + data.message + "</p>");
+    message.val("");
+        
 });
 
 socket.on("typing", function(data) {
