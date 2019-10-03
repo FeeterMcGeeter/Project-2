@@ -1,8 +1,6 @@
 $(document).ready(function () {
-
     var emailSignUpInput = $(".emailSignUp");
     var passwordSignUpInput = $(".passwordSignUp");
-
     // When the signup button is clicked, we validate the email and password are not blank
     $("#signUp").on("click", function (event) {
         event.preventDefault();
@@ -11,7 +9,6 @@ $(document).ready(function () {
             password: passwordSignUpInput.val()
         };
         console.log(userData);
-
         if (!userData.email || !userData.password) {
             return;
         }
@@ -56,7 +53,6 @@ $(document).ready(function () {
         emailLogInInput.val("");
         passwordLogInInput.val("");
     });
-
     // loginUser does a post to our "api/login" route and if successful, redirects us the the home page
     function loginUser(email, password) {
         $.post("/api/login", {
@@ -70,14 +66,10 @@ $(document).ready(function () {
                 alert("NO");
             });
     }
-});
 
-$("#logOut").on("click", function() {
-    $.ajax({url: "/logout", method: "GET"}).then (function() {
-        window.location.replace("/login");
+    $("#logOut").on("click", function () {
+        $.ajax({ url: "/logout", method: "GET" }).then(function () {
+            window.location.replace("/login");
+        });
     });
 });
-
-
-
-
