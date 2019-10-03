@@ -3,7 +3,6 @@
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
             <img class="coffee" src="img/coffeetalk.png">
-            <h1>{{show}}</h1>
             <nav>
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo">Welcome, <span> "Username"</span></a>
@@ -17,8 +16,8 @@
 
             <!-- ===== HAMBURGER MENU =====  -->
             <ul class="sidenav" id="mobile-demo">
-                <li><a href="#">Liked</a></li>
-                <li><a href="#">Log Out</a></li>
+                <li id="liked"><a href="#">Liked</a></li>
+                <li id="logOut"><a href="#">Log Out</a></li>
             </ul>
         </div>
     </div>
@@ -32,6 +31,8 @@
                     <img class="user-image" src="/img/man.jpg">
                 </div>
             </div>
+
+            <h1>{{show}}</h1>
 
             <div class="col s6">
                 <div id="coffee-chat">
@@ -56,10 +57,10 @@
     crossorigin="anonymous"></script>
 {{! ===== MATERIALIZE JS ===== }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="/js/index.js"></script>
-<script src="/js/chat.js"></script>
 {{!-- ===== SCRIPTS =====  --}}
-{{!-- <script src="/js/materialize.js"></script> --}}
+<script src="/js/materialize.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/login.js"></script>
+<script src="/js/chat.js"></script>
 <script src="/js/init.js"></script>
 <script src="/js/home.js"></script>
-<script src="/js/login.js"></script>

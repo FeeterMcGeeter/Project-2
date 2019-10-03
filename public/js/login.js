@@ -30,8 +30,7 @@ $(document).ready(function () {
         })
             .done(function (data) {
                 console.log(data);
-                emailSignUpInput.val("");
-                passwordSignUpInput.val("");
+                window.location.replace("/home");
             })
             .fail(function (err) {
                 console.log(err);
@@ -74,8 +73,8 @@ $(document).ready(function () {
     }
 });
 
-$("#logOut").on("click", function() {
-    $.ajax({url: "/logout", method: "GET"}).then (function() {
+$("#logOut").on("click", function () {
+    $.ajax({ url: "/logout", method: "GET" }).then(function () {
         window.location.replace("/login");
     });
 });
