@@ -4,7 +4,8 @@ module.exports = function (app) {
             res.redirect("/home");
         } else {
             res.redirect("/login");
-        }
+        } 
+        
     });
 
     app.get("/home", function(req, res) {
@@ -15,6 +16,10 @@ module.exports = function (app) {
         return res.render("home");
     });
 
+    app.get("/profile", function(req, res) {
+        res.render("profile");
+    });
+
     app.get("/login", function (req, res) {
         res.render("login");
     });
@@ -22,10 +27,11 @@ module.exports = function (app) {
     app.get("*", function (req, res) {
         res.render("404");
     });
+
 };
 
 // app.get("/profile",function(req,res){
-// database.sequelize(finndalla({where:{username}.then(
+// database.sequelize(findAll({where:{username}.then(
 //     function(data){
 //         var email = data.email
 //         var;
