@@ -22,6 +22,27 @@ module.exports = function (app) {
             });
     });
 
+    app.put("/api/profile", function (req, res) {
+        console.log(req.user);
+        if (req.user) {
+            db.User.update({
+                userName: req.body.userName,
+                bio: req.body.bio
+            }, {
+                where: {
+                    id: req.user.id
+                }
+            })
+                .then(function(user) {
+                    res.json(user);
+                })
+                .catch(function (err) {
+                    res.status(400).json(err);
+                });
+        } else {
+            res.status(403).end();
+        }
+    });
     app.get("/logout", function (req, res) {
         req.logout();
         res.redirect("/login");

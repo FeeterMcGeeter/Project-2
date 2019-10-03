@@ -35,6 +35,9 @@ $(document).ready(function () {
 
     var emailLogInInput = $(".emailLogIn");
     var passwordLogInInput = $(".passwordLogIn");
+    // var userNameInput = $("#userName");
+    // var bioInput = $("#bio");    
+    
 
     // When the form is submitted, we validate there's an email and password entered
     $("#logIn").on("click", function (event) {
@@ -72,4 +75,31 @@ $(document).ready(function () {
             window.location.replace("/login");
         });
     });
+
+    // $("#submit").on("click", function() {
+    //     event.preventDefault();
+    //     var profileData = {
+    //         userName: userNameInput.val().trim(),
+    //         // avatar: avatar.val(),
+    //         bio: bioInput.val(),
+    //     }; 
+    //     if (!profileData.userName || !profileData.bio) {
+    //         return;
+    //     } 
+    //     storeUserData(profileData.userName, profileData.bio);
+    // });
+
+    // function storeUserData(userName, bio) {
+    //     $.ajax({ url: "/api/profile", method: "PUT", data: {
+    //         userName: userName,
+    //         bio: bio,         
+    //     }})
+    //         .then(function() {
+    //             window.location.replace("/home");
+    //         })
+    //         .fail(function (err) {
+    //             console.log(err);
+    //         });        
+    // }
+
 });
