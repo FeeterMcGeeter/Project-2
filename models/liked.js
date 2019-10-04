@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Message = sequelize.define("Message", {
+    var Liked = sequelize.define("Liked", {
         text: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -9,12 +9,12 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
-    Message.associate = function(models) {
-        Message.belongsTo(models.User, {
+    Liked.associate = function(models) {
+        Liked.belongsTo(models.User, {
             foreignKey: {
                 allowNull: false
             }
         });
     };
-    return Message;
+    return Liked;
 };

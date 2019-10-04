@@ -5,7 +5,7 @@ module.exports = function (app) {
 
     app.post("/api/login", passport.authenticate("local"), function (req, res) {
         res.status(201).end();
-    }); 
+    });
 
     app.post("/api/signup", function (req, res) {
         db.User.create({
@@ -20,9 +20,13 @@ module.exports = function (app) {
             });
     });
 
-    app.get("/logout", function (req, res) {
-        req.logout();
-        res.redirect("/login");
+    app.get("/api/liked", function (req, res) {
+        db.Liked.findAll({
+            where: { UserId: req.UserId }
+        })
+            .then(function () {
+                res.render("liked", { liked: liked });
+            });
     });
 
     app.get("/api/user_data", function (req, res) {
@@ -42,5 +46,10 @@ module.exports = function (app) {
         } else {
             return res.render("login");
         }
+    });
+
+    app.get("/logout", function (req, res) {
+        req.logout();
+        res.redirect("/login");
     });
 };

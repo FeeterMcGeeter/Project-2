@@ -11,7 +11,7 @@ var feedback = $("#feedback");
 
 // ===== EMIT EVENTS =====
 button.on("click", function() {
-    console.log(message.val());
+    // console.log(message.val());
     socket.emit("chat", {
         message: message.val(),
         handle: handle.val()
@@ -26,11 +26,11 @@ message.keypress(function() {
 socket.on("chat", function(data) {
     // output.append("<p><strong>" + data.handle + ": </strong>" + data.message + "</p>" );
     var messageDiv = $("<div>").attr("id", "message-container");
-    var buttonLike = $("<button>").attr("id","like");
+    var buttonLike = $("<button>").attr("id","like").attr("data", data.message);
     var icon = $("<i>").attr("class", "fa fa-thumbs-up like");
     buttonLike.append(icon);
     messageDiv.html("<p><strong>" + data.handle + ": </strong>" + data.message + "</p>").append(buttonLike);
-    console.log(buttonLike);
+    // console.log(buttonLike);
     output.append($(messageDiv));
     message.val("");
         

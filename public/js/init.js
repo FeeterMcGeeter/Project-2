@@ -1,3 +1,4 @@
+// ===== HAMBURGER MENU =====
 (function($){
     $(function(){
 

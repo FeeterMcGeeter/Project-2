@@ -26,7 +26,7 @@ $(document).ready(function () {
             password: password
         })
             .done(function () {
-                window.location.replace("/profile");
+                window.location.replace("/home");
             }) 
             .fail(function (err) {
                 console.log(err);
@@ -67,9 +67,15 @@ $(document).ready(function () {
             });
     }
 
-    $("#logOut").on("click", function () {
+    // ===== CLICKING THE "LOG OUT" BUTTON IN THE NAVBAR WILL SEND USER TO THE LOG IN PAGE =====
+    $(".logOut").on("click", function () {
         $.ajax({ url: "/logout", method: "GET" }).then(function () {
             window.location.replace("/login");
         });
+    });
+
+    // ===== CLICKING THE "HOME" BUTTON IN THE NAVBAR WILL SEND USER TO THE HOME PAGE =====
+    $(".home").on("click", function () {
+        window.location.replace("/home");
     });
 });
