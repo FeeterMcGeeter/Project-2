@@ -155,6 +155,7 @@ nav {
   margin-bottom: auto;
   background-color: transparent;
   color: navy;
+  cursor: pointer;
 }
 
 .profile {

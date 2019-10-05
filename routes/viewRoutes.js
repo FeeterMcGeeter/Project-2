@@ -4,11 +4,11 @@ module.exports = function (app) {
             res.redirect("/home");
         } else {
             res.redirect("/login");
-        } 
-        
+        }
+
     });
 
-    app.get("/home", function(req, res) {
+    app.get("/home", function (req, res) {
         console.log(req.query);
         if (req.query.render === "liked") {
             return res.render("home", { show: "liked" });
@@ -16,8 +16,12 @@ module.exports = function (app) {
         return res.render("home");
     });
 
-    app.get("/profile", function(req, res) {
+    app.get("/profile", function (req, res) {
         res.render("profile");
+    });
+
+    app.get("/liked", function (req, res) {
+        res.render("liked");
     });
 
     app.get("/login", function (req, res) {
