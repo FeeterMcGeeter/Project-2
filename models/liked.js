@@ -1,11 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
     var Liked = sequelize.define("Liked", {
         text: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
+            type: DataTypes.STRING
+            // allowNull: false
         }
     });
 

@@ -17,20 +17,18 @@ $(document).ready(function () {
     });
 
     // ===== MESSAGE LIKE BUTTON =====
-    $("#like").on("click", function () {
+    $(document).on("click", "#like", function() {
+        console.log("yo");
         var messageData = $(this).attr("data");
 
-        $.post("/api/like", { text: messageData }, function (req, res) {
-            db.Liked.create({
-                text: req.body.text,
-                UserId: req.UserId
-            })
-                .then(function (dbLiked) {
-                    res.json(dbLiked);
-                })
-                .catch(function (err) {
-                    res.status(401).json(err);
-                });
-        });
+        $.post("/api/like", {
+            text: messageData
+        })
+            .done(function () {
+                $("#like").css("color", "purple");
+            }) 
+            .fail(function (err) {
+                console.log(err);
+            });
     });
 });

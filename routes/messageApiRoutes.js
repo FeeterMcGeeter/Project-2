@@ -21,12 +21,16 @@ module.exports = function (app) {
     });
 
     // POST route for saving a new message
-    app.post("/api/messages", function (req, res) {
-        db.Message.create(req.body).then(function (dbMessage) {
-            res.json(dbMessage);
-        });
+    app.post("/api/like", function (req, res) {
+        db.Liked.create({
+            text: req.body.text,
+            UserId: req.user.id
+        })
+            .then(function (dbLiked) {
+                res.json(dbLiked);
+            });
     });
-    
+
     // DELETE route for deleting messages
     app.delete("/api/messages/:id", function (req, res) {
         db.Message.destroy({
@@ -37,7 +41,7 @@ module.exports = function (app) {
             res.json(dbMessage);
         });
     });
-    
+
     // PUT route for updating messages
     app.put("/api/messages", function (req, res) {
         db.Message.update(req.body, {
@@ -49,4 +53,3 @@ module.exports = function (app) {
         });
     });
 };
-    
