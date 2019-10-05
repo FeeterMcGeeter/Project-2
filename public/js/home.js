@@ -20,14 +20,13 @@ $(document).ready(function () {
     $("#like").on("click", function () {
         var messageData = $(this).attr("data");
 
-        $.post("/api/likes", { text: messageData }, function (req, res) {
-            console.log(res);
+        $.post("/api/like", { text: messageData }, function (req, res) {
             db.Liked.create({
                 text: req.body.text,
                 UserId: req.UserId
             })
-                .then(function (data) {
-                    res.json(data);
+                .then(function (dbLiked) {
+                    res.json(dbLiked);
                 })
                 .catch(function (err) {
                     res.status(401).json(err);
