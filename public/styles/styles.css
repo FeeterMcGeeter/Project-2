@@ -36,6 +36,7 @@ p {
 .github {
  color: white;
  font-size: 20px;
+ margin-left: 100px;
 }
 
 .page-footer {
@@ -107,9 +108,9 @@ nav {
   padding-top: 50px;
 }
 
-.form {
+/* .form {
   margin-left: 225px;
-}
+} */
 
 .member {
   margin-left: 50px;
@@ -155,4 +156,13 @@ nav {
   background-color: transparent;
   color: navy;
   cursor: pointer;
+}
+
+.profile {
+  padding-top: 50px;
+  /* width: 50%; */
+}
+
+.profile-submit {
+  margin-left: 580px;
 }
