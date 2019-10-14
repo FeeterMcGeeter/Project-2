@@ -1,11 +1,16 @@
-# Project-2
-## Description
-    Appliction for creating blog posts, sharing images, "videos", weblinks, and associating them with defaul or user created "tags".
-## Design
-     ![main frame image](https://files.slack.com/files-pri/THMCEKQRF-FNE3MJ01H/screen_shot_2019-09-25_at_5.55.05_pm.png)
+# Project-2 Coffee Talk!
+### Description
+    Group project #2 was designed to be a social chat site.  New users will need to create a profile upon initial page load.  If a user has already created an account, but hasn't logged off, they will be redirected to the home page when revisiting the site.  From the home page, the user can start chatting with anyone in the chat room.
 
-## APIs Used
-    to be discussed.
-
-## Tasks
-    [Github porj page ](https://github.com/FeeterMcGeeter/Project-2/projects/1)
+### Technologies Used
+* Javascript
+* MySQL
+* JQuery
+* CSS3
+* Materialize
+* Node.js
+    * express
+    * express-handlebars (used to create the markup)
+    * passport.js (used for user validation)
+    * mysql2
+    * sequelize
